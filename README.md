@@ -2,7 +2,7 @@
 Flutter Canvas Tutorials Code
 
 # License:
-## Copyright (c) [2020] [Indy9000]
+## Copyright (c) 2020 Indy9000
 
 * The content here are for the consumption by individuals for educational purposes only. 
 

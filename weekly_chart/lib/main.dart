@@ -1,22 +1,34 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
-import 'my-painter.dart';
+import 'weekly_chart.dart';
 
+var rng = Random();
 void main() {
-  runApp(MyApp());
+  // generate the dummy data
+  var data = List<double>();
+  for (var i = 0; i < 20; i++) {
+    data.add(rng.nextDouble() * 100.0);
+  }
+
+  runApp(MyApp(data));
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  final List<double> data;
+  MyApp(this.data);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Week Chart',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyPainter(),
+      home: WeeklyChart(data),
     );
   }
 }

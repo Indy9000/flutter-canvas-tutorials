@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
+import 'dart:ui';
 
 class Particle {
-  Offset o;
-  Offset p;
-  double r;
-  double s;
+  Offset position;
+  Offset original;
+  double length;
+  double speed;
 }
